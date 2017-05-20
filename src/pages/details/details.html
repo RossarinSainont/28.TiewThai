@@ -1,0 +1,52 @@
+<ion-header>  
+  <ion-navbar color="bgtab">
+    <ion-title>{{ action }} Your Trips</ion-title>
+    <ion-buttons end *ngIf="!isNew">
+      <button ion-button (click)="delete()">
+          <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-content padding>  
+    <ion-list>
+        <ion-item>
+            <ion-label>{{info}}</ion-label>
+            <ion-input text-right type="text" [(ngModel)]="birthday.Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="MMMM D, YYYY" pickerFormat="MMMM D YYYY" [(ngModel)]="isoDate"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="save()">Save</button>
+</ion-content> -->
+
+<ion-content style="background-image:url(logo3.png);">  
+
+<br>
+
+  <ion-card>
+    <ion-list>
+        <ion-item>
+            <ion-label>Place:{{info}}</ion-label>
+            <ion-input text-right type="text" [(ngModel)]="birthday.Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Date to Go</ion-label>
+            <ion-datetime displayFormat="MMMM D, YYYY" pickerFormat="MMMM D YYYY" [(ngModel)]="isoDate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Note</ion-label>
+            <ion-textarea elastic [(ngModel)]="birthday.Note"></ion-textarea>
+        </ion-item>
+    </ion-list>
+  </ion-card>
+  <div style="padding-left:10px">
+  <button ion-button block (click)="save()" style="width: 290px; background-color: #862265">Save</button>
+  </div>
+
+    
+</ion-content>

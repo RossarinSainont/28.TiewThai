@@ -1,0 +1,394 @@
+<ion-header>
+  <ion-toolbar color="bgtab">
+    <ion-title><ion-icon name="md-arrow-back" (click)="nextProvinceNorth()"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;  TiewThai</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ply3">
+
+<div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/chiangmai1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/chiangmai2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/chiangmai3.png">
+    </ion-slide>
+    
+  </ion-slides>
+</div>
+
+<div padding>
+  <ion-segment [(ngModel)]="tt">
+    <ion-segment-button value="Place" style="color:#862265">
+      Place
+    </ion-segment-button>
+    <ion-segment-button value="Restaurant" style="color:#862265">
+      Restaurant
+    </ion-segment-button>
+    <ion-segment-button value="Hotel" style="color:#862265">
+      Hotel
+    </ion-segment-button>
+  </ion-segment>
+</div>
+<h1 class="ply4" style="color:grey">CHIANGMAI</h1>
+<div [ngSwitch]="tt">
+  
+
+  <ion-list *ngSwitchCase="'Place'" ngSelected="selected">
+    <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Elephant Park</b> </h3>
+          <i style="color:gray">3.7</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/elephant.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                             Elephant Nature Park is a sanctuary
+                             <br> and rescue centre for elephants in 
+                              <br>Mae Taeng District, Chiang Mai 
+                              <br>Province, Northern Thailand, 
+                              <br>approximately 60 kilometres from 
+                             <br> Chiang Mai City, co-founded by 
+                              <br>Sangduen "Lek" Chailert.
+                             <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">209/2 Sridom Chai Road, </i>
+                               <br><i style="font-weight:100">Chiang Mai 50100</i>
+                               
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 053 272 855</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list" (click)="elephant(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Wat Chedi Luang</b> </h3>
+   <i style="color:gray">4.3</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/temple.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                              Wat Chedi Luang is a Buddhist 
+                              <br>temple in the historic centre 
+                              <br>of Chiang Mai, Thailand. The 
+                              <br>current temple grounds were 
+                              <br>originally made up of three 
+                              <br>temples
+                              <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">103 Road King Prajadhipok </i>
+                               <br><i style="font-weight:100"> Phra Singh, Muang District, </i>
+                                <br><i style="font-weight:100">Chiang Mai, 50200 </i>
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 053 276 140</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list1" (click)="elephant(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>The Phae Gate</b> </h3>
+  <i style="color:gray">3.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/tapae.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                              Known as a site for many community 
+                              <br>events, this preserved city gate 
+                              <br>dates back to ancient times.
+                              <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">Tambon Si Phum,</i> 
+                                <br><i style="font-weight:100">Amphoe Mueang Chiang Mai,</i>
+                                <br><i style="font-weight:100">Chang Wat Chiang Mai 50200 </i>
+                              
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 081 023 7730</i>
+    
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list2" (click)="thePhae(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+ 
+    </ion-item>
+  </ion-list>
+
+
+
+
+
+<ion-list *ngSwitchCase="'Restaurant'">
+    <ion-item style="background-color:#E6EBE4">
+      
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Anchan Noodle</b> </h2>
+          <i style="color:gray">4.1</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/unchun1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/unchun2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/unchun3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/unchun4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">Su Thep, 
+                               <br> Mueang Chiang Mai District, 
+                                <br>Chiang Mai 50200</i>
+                              
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">084 949 2828</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 8 AM–4 PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list3" (click)="unChun(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Klua Khai Nimman</b></h2>
+          <i style="color:gray">3.9</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/khai1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/khai2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/khai3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/khai4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">Su Thep, 
+                               <br> Mueang Chiang Mai District, 
+                                <br>Chiang Mai 50200</i>
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100"> 053 218 278</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun  9 AM–8:30PM</i>
+
+
+      
+
+    </p>
+  </ion-card-content>
+   <button ion-item *ngFor="let item of list4" (click)="kluaKhai(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Le Grand Lanna</b> </h2>
+          <i style="color:gray">4.3</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/lanna1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/lanna2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/lanna3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/lanna4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">51/4 
+                                <br>Chiang Mai-Sankampaeng Rd</i>
+                                
+                              
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">053 888 888</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 11 AM–11:30PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list5" (click)="le(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+    </ion-item>
+    
+  </ion-list>
+
+
+
+<ion-list *ngSwitchCase="'Hotel'">
+     <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Le Merdien</b></h2>
+          <i style="color:gray">4.4</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/le.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">108 Chang Klan Road, 
+                                <br>Chang Klan, Chiang Mai, 50100</i>
+                               
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 053 253 666</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">4,00-5,000 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list6" (click)="merdien(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Holiday Inn</b> </h2>
+          <i style="color:gray">4.1</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/holiday.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">318/1 
+                                <br>Chiang Mai-Lamphun Road 
+                                <br>Tumbol Wat Kate, Chiangmai, 
+                                <br>50000</i>
+                                
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100">053 275 300</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">1,600-2,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list7" (click)="holiday(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Shangri-La</b> </h2>
+          <i style="color:gray">4.4</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/shang.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">89/8 Muang, 
+                                <br>Chang Klan Rd, 
+                                <br>Chiang Mai 50100 </i>
+                               
+                                
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100">053 253 888</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">5,000-6,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list8" (click)="shang(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+     </ion-item>
+  </ion-list>
+</div>
+
+  
+
+
+                  
+</ion-content>

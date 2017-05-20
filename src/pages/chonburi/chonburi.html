@@ -1,0 +1,385 @@
+<ion-header>
+  <ion-toolbar color="bgtab">
+    <ion-title><ion-icon name="md-arrow-back" (click)="nextEast()"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;  TiewThai</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ply3">
+
+<div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/pattaya3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/pattaya2.jpg">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/pattaya1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/pattaya4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<div padding>
+  <ion-segment [(ngModel)]="tt">
+    <ion-segment-button value="Place" style="color:#862265">
+      Place
+    </ion-segment-button>
+    <ion-segment-button value="Restaurant" style="color:#862265">
+      Restaurant
+    </ion-segment-button>
+    <ion-segment-button value="Hotel" style="color:#862265">
+      Hotel
+    </ion-segment-button>
+  </ion-segment>
+</div>
+<h1 class="ply4" style="color:grey">CHONBURI</h1>
+<div [ngSwitch]="tt">
+  
+
+  <ion-list *ngSwitchCase="'Place'" ngSelected="selected">
+    <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Jomtien Beach</b> </h3>
+          <i style="color:gray">4.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+  <img height="200" src="place/beach.png">
+
+  <ion-card-content>
+    
+    <p style="text-align: left; color:darkgray;">
+
+                              Jomtien or Jomtien 
+                             <br>Beach, on road signs and road maps 
+                             <br>also often written Chom Tian, 
+                             <br>is a town on the east coast of 
+                             <br>the Gulf of Thailand about 165 km 
+                             <br>south-east of Bangkok in Chonburi 
+    </p>
+    
+  </ion-card-content>
+<button ion-item *ngFor="let item of list" (click)="jomTien(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+  
+</ion-card>
+ 
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Cartoon Network</b> </h3>
+   <i style="color:gray">4.3</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/cartoon.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                              Cartoon Network Amazone 
+                              <br>Waterpark is the world's 
+                              <br>first Cartoon Network themed 
+                              <br>waterpark located at 888 Moo 8,  
+                              <br>Na Jomtien,Sattahip, Chonburi, 
+                              <br>Thailand, 15 kilometers away 
+                              <br>from South Pattaya.
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list1" (click)="cartoonNetwork(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Walking Street</b> </h3>
+  <i style="color:gray">4.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/walking.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                              Walking Street is a red-light 
+                              <br>district in the city of Pattaya, 
+                              <br>Thailand. The street is a tourist 
+                              <br>attraction that draws foreigners 
+                              <br>and Thai nationals, primarily for 
+                              <br>its night life.
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list2" (click)="walkingStreet(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+ 
+    </ion-item>
+  </ion-list>
+
+
+
+
+
+<ion-list *ngSwitchCase="'Restaurant'">
+    <ion-item style="background-color:#E6EBE4">
+      
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>The glass house</b> </h3>
+          <i style="color:gray">4.3</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/glasshouse3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/glasshouse4.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/glasshouse1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/glasshouse2.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">5/22 Moo 2, 
+                                 <br>Na Jomtien Road,
+                              <br>Na Jomtien Soi 10, Sattahip, 
+                              <br>Chon Buri 20250</i>
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">038 255 922</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 11AM–11:30PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list3" (click)="theGlassHouse(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>In A Good Mood</b> </h2>
+          <i style="color:gray">4.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/goodmood3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/goodmood1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/goodmood2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/goodmood4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">Samet, Chon Buri District, 
+                                <br>Chon Buri 20000</i>
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">082 649 2419</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun  11AM–11:30PM</i>
+
+
+      
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list4" (click)="inAGoodMood(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Sea Salt</b> </h2>
+          <i style="color:gray">3.5</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/seasalt2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/seasalt1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/seasalt3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/seasalt4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">700/285, Casalunar 
+                                <br>Paradiso Condo,Sukhumwit road, 
+                                <br>Saen Suk, Chon Buri District, 
+                                <br>Chon Buri 20130</i>
+                              
+                              
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">097 149 8228</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 11AM–11:30PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list5" (click)="seaSalt(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+    </ion-item>
+    
+  </ion-list>
+
+
+
+<ion-list *ngSwitchCase="'Hotel'">
+     <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Hilton Pattaya</b> </h3>
+          <i style="color:gray">5.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/hilton.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">333/101 Moo 9, Nong Prue,</i>
+                               <br><i style="font-weight:100">Bang Lamung, Chon Buri 20260</i>
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 038 253 000</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">3,500-5,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list6" (click)="hilton(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Chon Inter</b> </h2>
+          <i style="color:gray">3.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/chon.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">934 Sukhumvit Road,</i>
+                                <br><i style="font-weight:100">Bang Pla Soi, Mueng, 20000</i>
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 038 283 111</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">1,000-1,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list7" (click)="chonInter(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h2 style="text-align: left;"><b>Bangsaen Hotel</b> </h2>
+          <i style="color:gray">4.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/bangsaen.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">50, 54 Bangsaen Beach 
+                                <br>1 Road, Tumbon Saensuk, 
+                                <br>Bang Saen,Chonburi, 
+                                <br>Thailand, 20130</i>
+                                
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100">038 399 899</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">2,500-3,500 THB.</i>
+    </p>
+  </ion-card-content>
+   <button ion-item *ngFor="let item of list8" (click)="bangsaen(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+     </ion-item>
+  </ion-list>
+</div>
+
+  
+
+
+                  
+</ion-content>

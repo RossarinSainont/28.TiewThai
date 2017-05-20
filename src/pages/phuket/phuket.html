@@ -1,0 +1,396 @@
+<ion-header>
+  <ion-toolbar color="bgtab">
+    <ion-title><ion-icon name="md-arrow-back" (click)="nextSouth()"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;  TiewThai</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ply3">
+
+<div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/phuket1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/phuket2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/phuket3.png">
+    </ion-slide>
+    
+  </ion-slides>
+</div>
+
+<div padding>
+  <ion-segment [(ngModel)]="tt">
+    <ion-segment-button value="Place" style="color:#862265">
+      Place
+    </ion-segment-button>
+    <ion-segment-button value="Restaurant" style="color:#862265">
+      Restaurant
+    </ion-segment-button>
+    <ion-segment-button value="Hotel" style="color:#862265">
+      Hotel
+    </ion-segment-button>
+  </ion-segment>
+</div>
+<h1 class="ply4" style="color:grey">PHUKET</h1>
+<div [ngSwitch]="tt">
+  
+
+  <ion-list *ngSwitchCase="'Place'" ngSelected="selected">
+    <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Splash Jungle</b> </h3>
+          <i style="color:gray">4.0</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/splash.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                            Varied attractions such as a wave  
+                            <br>pool, slides & water play area, plus  
+                            <br>a restaurant & swim-up bar.
+                             <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">65 Soi Mai Khao 4, 
+                               <br>Tambon Mai Khao, Amphoe Thalang, 
+                               <br>Chang Wat Phuket 83110</i>
+                               
+                               
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 076 372 111</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list" (click)="splash(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Big Buddha </b> </h3>
+   <i style="color:gray">4.6</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/buddha.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                             The marble, 45-metre tall 
+                             <br>Buddha statue on a mountaintop 
+                             <br>offers panoramic views, 
+                             <br>a cafe & gift shop.
+                              <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">Karon, 
+                                <br>Mueang Phuket District, 
+                                <br>Phuket 83100 </i>
+                               
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 087 278 0596</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list1" (click)="big(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Promthep Cape</b> </h3>
+  <i style="color:gray">4.6</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+  </ion-item>
+
+  <img height="200" src="place/promthep.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+                               
+                             Picturesque cape & lookout point 
+                             <br>known for its stunning sea views, 
+                             <br>especially at sunset.
+                              <br><i style="font-weight:bold">Address:</i> <i style="font-weight:100">Mueang Phuket, 
+                                <br>Mueang Phuket District, 
+                                <br>Phuket</i> 
+                                
+                              
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 062 978 3284</i>
+    
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list2" (click)="promthep(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+ 
+    </ion-item>
+  </ion-list>
+
+
+
+
+
+<ion-list *ngSwitchCase="'Restaurant'">
+    <ion-item style="background-color:#E6EBE4">
+      
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Bollywood Phuket</b></h3>
+          <i style="color:gray">4.8</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/bollywood1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/bollywood2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/bollywood3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/bollywood4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">Bollywood Phuket 
+                                <br>Restaurant & Bar Sino Bypass,
+                                 <br>Wichit, Muang, Phuket 83000</i>
+                               
+                              
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">076 304 034</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 11 AM–11 PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list3" (click)="bollywood(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>The 9th Floor</b></h3>
+          <i style="color:gray">4.4</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/9th1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/9th2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/9th3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/9th4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">47 Rat-U-Thid Rd. 
+                                <br>Sky Inn Condotel,, P
+                                <br>atong Beach, Phuket, 83150</i>
+                               
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">  081 079 2699</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun  6 AM–11 PM</i>
+
+
+      
+
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list4" (click)="th9(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Blue Elephant</b> </h3>
+          <i style="color:gray">4.6</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+    
+  </ion-item>
+  
+  <div>
+
+<ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+        <img src="place/blue1.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/blue2.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/blue3.png">
+    </ion-slide>
+    <ion-slide>
+          <img src="place/blue4.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
+  <!--<img height="200" src="place/glasshouse1.png">-->
+  
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">Krabi Road 96, 
+                                <br>Phuket town, 83000</i>
+                                
+                                
+                              
+                              <br><i style="font-weight:bold">Phone:</i> <i style="font-weight:100">076 354 35</i>
+                              <br><i style="font-weight:bold">Hours:</i> <i style="font-weight:100">Mon-Sun 9 AM–10:30PM</i>
+
+                              
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list5" (click)="blue(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+
+
+    </ion-item>
+    
+  </ion-list>
+
+
+
+<ion-list *ngSwitchCase="'Hotel'">
+     <ion-item style="background-color:#E6EBE4">
+    
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Amatara Wellness</b></h3>
+          <i style="color:gray">4.7</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/amatara.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">84 Moo 8, 
+                                <br>Vichit Muang Phuket 83000</i>
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100"> 076 318 888</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">6,000-7,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list6" (click)="amatara(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Cape Panwa</b> </h3>
+          <i style="color:gray">4.4</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star-half" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/cape.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">27, 27/2, Mu 8, 
+                                <br>Sakdidej Road, Wichit, 
+                                <br>Mueang Phuket, 
+                                <br>Phuket 83000</i>
+
+                                
+                                
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100">076 391 123</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">4,000-5,000 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list7" (click)="cape(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+<ion-card style="margin-top:0px;padding-left:10px; padding-right:10px;">
+  
+    <ion-item>
+    
+    <h3 style="text-align: left;"><b>Novotel Phuket</b></h3>
+          <i style="color:gray">4.1</i> <ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon><ion-icon name="star" style="color:gray"></ion-icon>
+                         
+  </ion-item>
+
+  <img height="200" src="place/novotel.png">
+
+  <ion-card-content>
+    <p style="text-align: left; color:darkgray;">
+
+                              <i style="font-weight:bold">Address:</i> <i style="font-weight:100">118/16 Moo 3, 
+                                <br>Tambon Kamala, Amphur Kathu, 
+                                <br>Phuket 83150</i>
+                                
+                                
+                            
+                                <br><i style="font-weight:bold">Phone:</i><i style="font-weight:100">076 303 700</i>
+                                <br><i style="font-weight:bold">Price:</i><i style="font-weight:100">2,700-3,500 THB.</i>
+    </p>
+  </ion-card-content>
+  <button ion-item *ngFor="let item of list8" (click)="novotel(item) "><h3 style="color:#862265">Add to List Page <ion-icon name="ios-list-box-outline" style="color:#862265"></ion-icon></h3> </button>
+</ion-card>
+
+
+     </ion-item>
+  </ion-list>
+</div>
+
+  
+
+
+                  
+</ion-content>

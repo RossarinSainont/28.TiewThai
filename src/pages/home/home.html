@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="bgtab">
+    <ion-title>
+      Your Trips
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="showDetail()">
+        <!-- <button ion-button *ngFor="let item of list" (click)="itemTapped(item) ">-->
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-content>
+    <ion-list inset>
+        <ion-item *ngFor="let birthday of birthdays" (click)="showDetail(birthday)">
+          <div item-left>{{ birthday.Name }}</div>
+          <div item-right>{{ birthday.Date | date:'yMMMMd' }}</div>
+        </ion-item>
+      </ion-list>
+</ion-content>-->
+
+<ion-content style="background-image:url(logo3.png);"> 
+  
+    <ion-list inset>
+        <ion-item *ngFor="let birthday of birthdays" (click)="showDetail(birthday)">
+
+        <table>
+        <tr>
+            <div item-left><b>Location:</b>  {{ birthday.Name }}</div>
+            <div item-right><b>Date to Go:</b>  {{ birthday.Date | date:'yMMMMd' }}</div>
+        </tr>
+        <tr>      
+            <div style="color: grey"><p style="color: black"><b>Note:</b> </p>{{ birthday.Note }}</div>
+        </tr>
+        </table>
+        </ion-item>
+        <br>
+    </ion-list>
+
+  
+</ion-content>
